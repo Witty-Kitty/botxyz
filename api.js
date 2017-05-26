@@ -5,6 +5,7 @@ exports.GetSets = function (user, callback) {
         },
             function (error, response, body) {
                 if (error)
+                    console.log(error);
                     callback(error);
                 else {
                     body = JSON.parse(body);
