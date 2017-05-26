@@ -4,11 +4,8 @@ exports.GetSets = function (user, callback) {
 
         },
             function (error, response, body) {
-                if (error){
-                    
-                    console.log(error);
+                if (error)
                     callback(error);
-                }
                 else {
                     body = JSON.parse(body);
                     for (var x = 0; x < body.length; x++) {
