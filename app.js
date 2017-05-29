@@ -1,18 +1,7 @@
     var restify = require('restify');
     var builder = require('botbuilder');
 
-    var username; 
-    var quiz = require('./api.js');
-    var index = 0;
-
-
-
-    (function () {
-        if (username)
-            quiz.GetSets(username);   // I will invoke myself
-    })();
-
-
+  
     //=========================================================
     // Bot Setup
     //=========================================================
@@ -31,6 +20,19 @@
 
     var bot = new builder.UniversalBot(connector);
     server.post('/api/messages', connector.listen());
+
+
+
+    var username; 
+    var quiz = require('./api.js');
+    var index = 0;
+
+
+
+    (function () {
+        if (username)
+            quiz.GetSets(username);   // I will invoke myself
+    })();
 
 
     //=========================================================
