@@ -1,7 +1,7 @@
     var restify = require('restify');
     var builder = require('botbuilder');
 
-    var username = 'kathleen_sim'; 
+    var username; 
     var quiz = require('./api.js');
     var index = 0;
 
