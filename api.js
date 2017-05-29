@@ -1,7 +1,7 @@
 exports.GetSets = function (user, callback) {
         request.get({
-            // uri: 'https://api.quizlet.com/2.0/users/' + user + '/sets?client_id=uyZGpJA5QZ',
-            uri: 'https://api.quizlet.com/2.0/users/kathleen_sim/sets?client_id=uyZGpJA5QZ',
+            uri: 'https://api.quizlet.com/2.0/users/' + user + '/sets?client_id=uyZGpJA5QZ',
+            // uri: 'https://api.quizlet.com/2.0/users/kathleen_sim/sets?client_id=uyZGpJA5QZ',
 
         },
             function (error, response, body) {
