@@ -17,7 +17,6 @@
         appPassword: process.env.MIRCROSOFT_APP_PASSWORD
     });
 
-    var bot = new builder.UniversalBot(connector);
     server.post('/api/messages', connector.listen());
 
     var bot = new builder.UniversalBot(connector, function (session) {
