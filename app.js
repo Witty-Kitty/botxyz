@@ -19,7 +19,17 @@
     // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
     var bot = new builder.UniversalBot(connector, function (session) {
         session.send("You said: %s", session.message.text);
-        session.send("http://d86b71b8.ngrok.io/hello.png");
+        var msg =    {
+        "attachments": [
+            {
+                "contentType": "image/png",
+                "contentUrl": "http://d86b71b8.ngrok.io/hello.png"
+            }
+        ]
+    };
+    
+    session.send(msg);
+        // session.send("http://d86b71b8.ngrok.io/hello.png");
     });
 
     server.get(/.*/, restify.serveStatic({ 'directory': '.', 'default': 'index.html' }));
